@@ -1,5 +1,11 @@
 import React from 'react';
 import { Box, Container, Typography, Grid, Button, Link, List, ListItem, ListItemText, Paper } from '@mui/material';
+import Img from './Assets/logo.png';
+import playstore from './Assets/playstore.png';
+import appstore from './Assets/apple.png';
+
+
+
 
 function App() {
   return (
@@ -8,7 +14,7 @@ function App() {
       <Box sx={{ backgroundColor: '#424242', color: '#fff', py: 2 }}>
         <Container>
           <Box display="flex" justifyContent="space-between" alignItems="center">
-            <Typography variant="h6">🐝 Abelha Rainha | Área da Revendedora</Typography>
+          <img src={Img} alt="Logo" />
             <Box>
               <Link href="#" color="inherit" sx={{ mx: 1 }}>
                 Facebook
@@ -39,11 +45,11 @@ function App() {
             <Button
               variant="contained"
               color="primary"
-              href="#"
+              href="https://play.google.com/store/apps/details?id=com.abelharainha"
               sx={{ backgroundColor: '#000', color: '#fff', px: 4, py: 2 }}
             >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png"
+                src={playstore}
                 alt="Google Play"
                 style={{ height: '40px' }}
               />
@@ -56,11 +62,11 @@ function App() {
             <Button
               variant="contained"
               color="primary"
-              href="#"
+              href="https://apps.apple.com/br/app/abelha-rainha/id1479251020"
               sx={{ backgroundColor: '#000', color: '#fff', px: 4, py: 2 }}
             >
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Download_on_the_App_Store_Badge.svg/512px-Download_on_the_App_Store_Badge.svg.png"
+                src={appstore}
                 alt="App Store"
                 style={{ height: '40px' }}
               />

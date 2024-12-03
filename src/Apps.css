@@ -1,0 +1,79 @@
+/* Estilos globais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  /* Seção superior */
+  .header {
+    background-color: #ffe8e8;
+    padding: 20px;
+  }
+  
+  .promo h1 {
+    color: #a31d5f;
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  .promo p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .cta-button {
+    background-color: #a31d5f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cta-button:hover {
+    background-color: #8e1a52;
+  }
+  
+  /* Parceria Livelo */
+  .partnership {
+    background-color: #a31d5f;
+    color: white;
+    padding: 20px;
+    margin-top: -5px;
+  }
+  
+  .partnership h2 {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+  }
+  
+  .livelo-logo h1 {
+    background-color: white;
+    color: #a31d5f;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  /* Regulamento */
+  .rules {
+    background-color: #f5f5f5;
+    padding: 20px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .rules h2 {
+    text-align: center;
+    color: #a31d5f;
+    margin-bottom: 20px;
+  }
+  

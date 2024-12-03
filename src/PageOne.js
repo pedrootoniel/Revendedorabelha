@@ -1,6 +1,11 @@
 import React from 'react';
 import { Box, Typography, Container, Grid, Card, CardContent, Button, Link } from '@mui/material';
 import Img from './Assets/logo.png';
+import revendedora from './Assets/revendedora.jpg';
+import aplicativo from './Assets/aplicativo.jpg';
+import catalago from './Assets/img3.png';
+
+
 
 function App() {
   return (
@@ -10,9 +15,8 @@ function App() {
         <Container>
           <Box display="flex" justifyContent="space-between" alignItems="center">
             <img src={Img} alt="Logo" />
-            <Typography variant="p">Área da Revendedora</Typography>
             <Box>
-            <Link href="#" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
+            <Link href="/" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
                 Voltar para loja
               </Link>
               <Link href="#" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
@@ -38,9 +42,9 @@ function App() {
               <CardContent>
                 <Box textAlign="center">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={revendedora}
                     alt="Quero Revender"
-                    style={{ borderRadius: '8px', marginBottom: '16px', width: '100%' }}
+                    style={{ borderRadius: '8px', marginBottom: '16px', width: '95%' }}
                   />
                   <Typography variant="h5" gutterBottom>
                     Quero Revender
@@ -48,8 +52,8 @@ function App() {
                   <Typography variant="body2" color="textSecondary" gutterBottom>
                     Faça parte dessa equipe maravilhosa que cresce a cada dia mais no Brasil. Seja um revendedor e espalhe a beleza por onde passar.
                   </Typography>
-                  <Link to="google.com">
-                  <Button variant="contained" color="error" href="https://gxgaming.com.br" sx={{ mt: 2 }}>
+                  <Link to="https://distribuidor.abelharainha.com.br/login">
+                  <Button variant="contained" color="error" href="https://distribuidor.abelharainha.com.br/login" sx={{ mt: 2 }}>
                     Saiba Como
                   </Button>
                   </Link>
@@ -64,7 +68,7 @@ function App() {
               <CardContent>
                 <Box textAlign="center">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={aplicativo}
                     alt="Baixar o Aplicativo"
                     style={{ borderRadius: '8px', marginBottom: '16px', width: '100%' }}
                   />
@@ -74,7 +78,7 @@ function App() {
                   <Typography variant="body2" color="textSecondary" gutterBottom>
                     O aplicativo da Abelha Rainha garante mais praticidade, organização e economia de tempo para você, revendedor(a)!
                   </Typography>
-                  <Button variant="contained" color="primary" href="https://gxgaming.com.br" sx={{ mt: 2 }}>
+                  <Button variant="contained" color="primary" href="/baixar" sx={{ mt: 2 }}>
                     Baixar
                   </Button>
                 </Box>
@@ -88,9 +92,9 @@ function App() {
               <CardContent>
                 <Box textAlign="center">
                   <img
-                    src="https://via.placeholder.com/150"
+                    src={catalago}
                     alt="Catálogo Digital"
-                    style={{ borderRadius: '8px', marginBottom: '16px', width: '100%' }}
+                    style={{ borderRadius: '8px', marginBottom: '16px', width: '67%' }}
                   />
                   <Typography variant="h5" gutterBottom>
                     Catálogo Digital
