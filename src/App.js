@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageOne from './PageOne';
 import PageTwo from './PageTwo';
 //import PageTrhe from './PageTrhe'
-//mport Livelo from './livelo'
+import Livelo from './livelo'
 
 
 
@@ -17,6 +17,7 @@ function App() {
         <Route path="/baixar" element={<PageTwo />} />
       </Routes>
       <Fragment>
+        <Livelo/>
       </Fragment>
     </Router>
   );

@@ -1,63 +1,135 @@
 import React from 'react';
-import { Box, Typography, Container, Grid, Card, CardContent, Button, Link } from '@mui/material';
-import Img from './Assets/logo.png';
-import revendedora from './Assets/revendedora.jpg';
-import aplicativo from './Assets/aplicativo.jpg';
-import catalago from './Assets/img3.png';
+import styled from 'styled-components';
+import { Container, Grid, Typography, Button, Card, CardContent } from '@mui/material';
+import { Link } from 'react-router-dom';
+import logo from './Assets/logo.png'
+import revendedora from './Assets/revendedora.jpg'
+import aplicativo from './Assets/aplicativo.jpg'
+import catalago from './Assets/img3.png'
 
 
+// Styled Components
+const Wrapper = styled.div`
+  background-color: #f9f9f9;
+  min-height: 100vh;
+`;
 
-function App() {
+const Header = styled.header`
+  background-color: #424242;
+  color: #fff;
+  padding: 10px 0;
+`;
+
+const HeaderContainer = styled(Container)`
+  background-color: #424242;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+const LogoLink = styled.a`
+  img {
+    height: 20px;
+
+    @media (max-width: 768px) {
+      height: 40px;
+    }
+  }
+`;
+
+
+const SocialLinks = styled.div`
+  display: flex;
+  gap: 16px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 10px;
+    justify-content: center;
+  }
+`;
+
+const CardImage = styled.img`
+  border-radius: 8px;
+  margin-bottom: 16px;
+  width: ${(props) => props.width || '100%'};
+`;
+
+const Footer = styled.footer`
+  background-color: #424242;
+  color: #fff;
+  padding: 16px 0;
+  text-align: center;
+`;
+
+const App = () => {
   return (
-    <Box sx={{ backgroundColor: '#f9f9f9', minHeight: '100vh' }}>
+    <Wrapper>
       {/* Header */}
-      <Box sx={{ backgroundColor: '#424242', color: '#fff', padding: '10px 0' }}>
-        <Container>
-          <Box display="flex" justifyContent="space-between" alignItems="center">
-            <img src={Img} alt="Logo" />
-            <Box>
-            <Link href="/" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
-                Voltar para loja
-              </Link>
-              <Link href="#" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
-                Facebook
-              </Link>
-              <Link href="#" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
-                Instagram
-              </Link>
-              <Link href="#" color="inherit" sx={{ textDecoration: 'none', mx: 1 }}>
-                YouTube
-              </Link>
-            </Box>
-          </Box>
-        </Container>
-      </Box>
+      <Header>
+        <HeaderContainer>
+          <LogoLink href="/">
+            <img className='logo1' src={logo} alt="Logo" />
+          </LogoLink>
+          <SocialLinks>
+          <a href="/">Volta para o site</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+          </SocialLinks>
+        </HeaderContainer>
+      </Header>
 
-      {/* Conteúdo principal */}
+      {/* Conteúdo Principal */}
       <Container sx={{ py: 5 }}>
         <Grid container spacing={3}>
           {/* Primeiro Cartão */}
           <Grid item xs={12} md={4}>
             <Card>
               <CardContent>
-                <Box textAlign="center">
-                  <img
+                <div style={{ textAlign: 'center' }}>
+                  <CardImage
                     src={revendedora}
                     alt="Quero Revender"
-                    style={{ borderRadius: '8px', marginBottom: '16px', width: '95%' }}
+                    width="95%"
                   />
                   <Typography variant="h5" gutterBottom>
                     Quero Revender
                   </Typography>
                   <Typography variant="body2" color="textSecondary" gutterBottom>
-                    Faça parte dessa equipe maravilhosa que cresce a cada dia mais no Brasil. Seja um revendedor e espalhe a beleza por onde passar.
+                    Faça parte dessa equipe maravilhosa que cresce a cada dia mais no Brasil.
+                    Seja um revendedor e espalhe a beleza por onde passar.
                   </Typography>
                   <Link to="https://distribuidor.abelharainha.com.br/login">
-                  <Button variant="contained" color="error" href="https://distribuidor.abelharainha.com.br/login" sx={{ mt: 2 }}>
-                    Saiba Como
-                  </Button>
+                    <Button
+                      variant="contained"
+                      color="error"
+                      sx={{ mt: 2 }}
+                    >
+                      Saiba Como
+                    </Button>
                   </Link>
-                </Box>
+                </div>
               </CardContent>
             </Card>
           </Grid>
@@ -66,11 +138,10 @@ function App() {
           <Grid item xs={12} md={4}>
             <Card>
               <CardContent>
-                <Box textAlign="center">
-                  <img
+                <div style={{ textAlign: 'center' }}>
+                  <CardImage
                     src={aplicativo}
                     alt="Baixar o Aplicativo"
-                    style={{ borderRadius: '8px', marginBottom: '16px', width: '100%' }}
                   />
                   <Typography variant="h5" gutterBottom>
                     Baixar o Aplicativo
@@ -78,10 +149,15 @@ function App() {
                   <Typography variant="body2" color="textSecondary" gutterBottom>
                     O aplicativo da Abelha Rainha garante mais praticidade, organização e economia de tempo para você, revendedor(a)!
                   </Typography>
-                  <Button variant="contained" color="primary" href="/baixar" sx={{ mt: 2 }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    href="/baixar"
+                    sx={{ mt: 2 }}
+                  >
                     Baixar
                   </Button>
-                </Box>
+                </div>
               </CardContent>
             </Card>
           </Grid>
@@ -90,11 +166,11 @@ function App() {
           <Grid item xs={12} md={4}>
             <Card>
               <CardContent>
-                <Box textAlign="center">
-                  <img
+                <div style={{ textAlign: 'center' }}>
+                  <CardImage
                     src={catalago}
                     alt="Catálogo Digital"
-                    style={{ borderRadius: '8px', marginBottom: '16px', width: '67%' }}
+                    width="67%"
                   />
                   <Typography variant="h5" gutterBottom>
                     Catálogo Digital
@@ -102,10 +178,15 @@ function App() {
                   <Typography variant="body2" color="textSecondary" gutterBottom>
                     Faça o download do nosso catálogo e tenha em mãos os melhores produtos para cuidar da sua beleza e bem-estar.
                   </Typography>
-                  <Button variant="contained" color="success" href="https://gxgaming.com.br" sx={{ mt: 2 }}>
+                  <Button
+                    variant="contained"
+                    color="success"
+                    href="https://gxgaming.com.br"
+                    sx={{ mt: 2 }}
+                  >
                     Acessar
                   </Button>
-                </Box>
+                </div>
               </CardContent>
             </Card>
           </Grid>
@@ -113,15 +194,13 @@ function App() {
       </Container>
 
       {/* Footer */}
-      <Box sx={{ backgroundColor: '#424242', color: '#fff', py: 2 }}>
-        <Container>
-          <Typography variant="body2" align="center">
-            Copyright © 2024 Abelha Rainha. Todos os direitos reservados.
-          </Typography>
-        </Container>
-      </Box>
-    </Box>
+      <Footer>
+        <Typography variant="body2">
+          Copyright © 2024 Abelha Rainha. Todos os direitos reservados.
+        </Typography>
+      </Footer>
+    </Wrapper>
   );
-}
+};
 
 export default App;
