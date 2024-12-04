@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import logo from './Assets/logo.png';
 import playstore from './Assets/playstore.png'; // Substitua pelo caminho correto
 import appstore from './Assets/apple.png'; // Substitua pelo caminho correto
+import { Link } from 'react-router-dom'
 
 // Styled Components
 const Wrapper = styled.div`
@@ -50,6 +51,7 @@ const Links = styled.nav`
     text-decoration: none;
     margin: 0 8px;
     font-size: 14px;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
@@ -185,14 +187,20 @@ const App = () => {
 
         {/* Botões de download */}
         <ButtonGroup>
+          <Link to="https://play.google.com/store/apps/details?id=com.abelharainha">
           <button>
             <img src={playstore} alt="Google Play" />
             Download para Android
           </button>
+          </Link>
+          <Link to="https://apps.apple.com/br/app/abelha-rainha/id1479251020">
+
           <button>
             <img src={appstore} alt="App Store" />
             Download para iOS
           </button>
+          </Link>
+
         </ButtonGroup>
 
         {/* Lista de vantagens */}
