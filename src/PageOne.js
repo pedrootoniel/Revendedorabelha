@@ -92,7 +92,7 @@ const App = () => {
             <img className='logo1' src={logo} alt="Logo" />
           </LogoLink>
           <SocialLinks>
-          <a href="/">Volta para o site</a>
+          <a href="/">← Volta para o site</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>
@@ -181,7 +181,7 @@ const App = () => {
                   <Button
                     variant="contained"
                     color="success"
-                    href="https://gxgaming.com.br"
+                    href="/catalago"
                     sx={{ mt: 2 }}
                   >
                     Acessar

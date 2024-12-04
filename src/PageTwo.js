@@ -167,7 +167,7 @@ const App = () => {
             <img src={logo} alt="Logo" />
           </LogoLink>
           <Links>
-            <a href="/">Voltar para a loja</a>
+            <a href="/">← Voltar para a loja</a>
             <a href="#">Facebook</a>
             <a href="#">Instagram</a>
             <a href="#">YouTube</a>

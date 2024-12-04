@@ -5,6 +5,8 @@ import PageOne from './PageOne';
 import PageTwo from './PageTwo';
 //import PageTrhe from './PageTrhe'
 import Livelo from './livelo'
+import Catalago from './catalago'
+
 
 
 
@@ -15,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/" element={<PageOne />} />
         <Route path="/baixar" element={<PageTwo />} />
+        <Route path="/catalago" element={<Catalago />} />
       </Routes>
       <Fragment>
         <Livelo/>
